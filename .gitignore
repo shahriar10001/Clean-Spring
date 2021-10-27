@@ -1,0 +1,9 @@
+# Project exclude paths
+/Domain/target/
+/Facade/target/
+/Infrastructure.Persistence/target/
+/Infrastructure.Security/target/
+/Infrastructure.Services/target/
+/Infrastructure.Util/target/
+/Presentation.API/target/
+/target/

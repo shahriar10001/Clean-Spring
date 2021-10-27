@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Infrastructure.Security" />
+        <module name="Infrastructure.Services" />
+        <module name="Facade" />
+        <module name="Infrastructure.Persistence" />
+        <module name="Presentation.API" />
+        <module name="Domain" />
+        <module name="Infrastructure.Util" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
