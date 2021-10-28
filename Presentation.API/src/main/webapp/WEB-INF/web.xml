@@ -21,7 +21,7 @@
         <servlet-name>appServlet</servlet-name>
         <url-pattern>*.json</url-pattern>
     </servlet-mapping>
-    <display-name>Archetype Created Web Application</display-name>
+    <display-name>This app is created by clean-spring framework</display-name>
 <!--    <filter>-->
 <!--        <filter-name>AuthenticationFilter</filter-name>-->
 <!--        <filter-class>com.Application.Config.AuthenticationFilter</filter-class>-->

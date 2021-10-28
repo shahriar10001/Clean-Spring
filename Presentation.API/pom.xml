@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>com.domain.example</artifactId>
         <groupId>org.example</groupId>
@@ -12,10 +13,18 @@
     <artifactId>Presentation.API</artifactId>
 
     <properties>
+
         <spring.version>5.2.10.RELEASE</spring.version>
         <swagger>2.9.2</swagger>
         <application.version>1.0-SNAPSHOT</application.version>
+        <!-- ********************** tomcat variables ***************************** -->
+        <tomcat.deploy.url>0.0.0.0:8080</tomcat.deploy.url>
+        <tomcat.deploy.path>appName</tomcat.deploy.path>
+        <tomcat.deploy.username>admin</tomcat.deploy.username>
+        <tomcat.deploy.password>admin</tomcat.deploy.password>
+        <deploy.display></deploy.display>
     </properties>
+
      <dependencies>
          <dependency>
              <groupId>org.example</groupId>
@@ -67,7 +76,7 @@
      </dependencies>
 
 
-         <!--*******************************environments***********************-->
+   <!--*******************************environments***********************-->
 
     <profiles>
         <profile>
@@ -78,11 +87,38 @@
             <build>
                 <resources>
                     <resource>
-                        <directory>src/main/resources/env.prod1</directory>
+                        <directory>src/main/resources/env.${project.env}</directory>
                     </resource>
                 </resources>
             </build>
         </profile>
     </profiles>
+    <!--*******************************environments***********************-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+                <configuration>
+                    <argLine>-Xms512m -Xmx1024m</argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://${tomcat.deploy.url}/manager/text</url>
+                    <server>TomcatServer</server>
+                    <path>/${tomcat.deploy.path}</path>
+                    <update>true</update>
+                    <username>${tomcat.deploy.username}</username>
+                    <password>${tomcat.deploy.password}</password>
+                </configuration>
+
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

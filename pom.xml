@@ -23,8 +23,10 @@
     </modules>
 
     <properties>
-        <project.env>prod1</project.env>
-
+        <!-- ********************** env ***************************** -->
+        <project.env>dev</project.env>
+        <!-- ******************************************************************* -->
+        <!-- **********************other variables ***************************** -->
         <encoding>UTF-8</encoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -47,17 +49,17 @@
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>3.1.1</version>
             </plugin>
-            <plugin>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.4.2</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.scm</groupId>
-                        <artifactId>maven-scm-provider-gitexe</artifactId>
-                        <version>1.8.1</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
+<!--            <plugin>-->
+<!--                <artifactId>maven-release-plugin</artifactId>-->
+<!--                <version>2.4.2</version>-->
+<!--                <dependencies>-->
+<!--                    <dependency>-->
+<!--                        <groupId>org.apache.maven.scm</groupId>-->
+<!--                        <artifactId>maven-scm-provider-gitexe</artifactId>-->
+<!--                        <version>1.8.1</version>-->
+<!--                    </dependency>-->
+<!--                </dependencies>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 </project>
