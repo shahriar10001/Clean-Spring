@@ -64,7 +64,25 @@
              <artifactId>guava</artifactId>
              <version>23.0</version>
          </dependency>
-
      </dependencies>
+
+
+         <!--*******************************environments***********************-->
+
+    <profiles>
+        <profile>
+            <id>${project.env}</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/resources/env.prod1</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
 
 </project>

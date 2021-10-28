@@ -20,7 +20,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@PropertySource(value = {"classpath:dev.hibernateConfig.properties"})
+@PropertySource(value = {"classpath:hibernateConfig.properties"})
 @ComponentScan({"com.Config"})
 
 public class AppConfig {
