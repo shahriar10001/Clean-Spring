@@ -6,6 +6,7 @@ import java.io.IOException;
 
 public interface IAuthenticationService {
     HttpServletRequest getTokenVerified(HttpServletRequest httpServletRequest) throws ServletException, IOException;
-    public Object getClaims(String key);
+    Object getClaims(String key);
+    Object getAllClaims();
 
 }

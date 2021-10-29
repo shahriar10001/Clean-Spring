@@ -39,7 +39,7 @@ public class JwtProvider implements IJwtProvider {
             Map<String, Object> climesMap = new HashMap<>();
             if (jwtToken == null || jwtToken.length() == 0 ||
                     (jwtToken != null && jwtToken.toUpperCase().equals("test".toUpperCase()))) {
-                return getClimes(null);
+                return getClaimsMap(null);
             }
 
             PublicKey publicKey = getPublicKey(wso2Cert);

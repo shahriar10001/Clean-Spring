@@ -1,4 +1,4 @@
-# Project exclude paths
+# Project exclude pathshost.header
 /Domain/target/
 /Facade/target/
 /Infrastructure.Persistence/target/
@@ -8,3 +8,4 @@
 /Presentation.API/target/
 /target/
 /.idea
+/.run

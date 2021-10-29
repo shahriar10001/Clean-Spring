@@ -2,9 +2,9 @@ package Core.Security.Services;
 
 import Core.Security.Helper.IJwtProvider;
 import Core.Services.Security.IServices.IAuthenticationService;
+import org.springframework.core.env.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.ServletException;
@@ -39,8 +39,12 @@ public class AuthenticationService implements IAuthenticationService {
     }
 
     public Object getClaims(String key){
+          return ((Map<String, Object>)getAllClaims()).get(key);
+    }
+
+    public Object getAllClaims(){
         Map<String, Object> climes = (Map<String, Object>) webContext.getAttribute("climes");
-        return climes.get(key);
+        return climes;
     }
 
 
