@@ -1,4 +1,4 @@
-package IServices.core;
+package IServices;
 
 import org.springframework.context.annotation.ComponentScan;
 

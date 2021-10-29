@@ -22,12 +22,12 @@
         <url-pattern>*.json</url-pattern>
     </servlet-mapping>
     <display-name>This app is created by clean-spring framework</display-name>
-<!--    <filter>-->
-<!--        <filter-name>AuthenticationFilter</filter-name>-->
-<!--        <filter-class>com.Application.Config.AuthenticationFilter</filter-class>-->
-<!--    </filter>-->
-<!--    <filter-mapping>-->
-<!--        <filter-name>AuthenticationFilter</filter-name>-->
-<!--        <url-pattern>/*</url-pattern>-->
-<!--    </filter-mapping>-->
+    <filter>
+        <filter-name>JaasFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>JaasFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>

@@ -1,6 +1,6 @@
 package com.Application.API.Test;
 
-import IServices.core.ISampleServices;
+import IServices.ISampleServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;

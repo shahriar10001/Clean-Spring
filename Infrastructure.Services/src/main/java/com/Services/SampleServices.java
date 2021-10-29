@@ -2,7 +2,7 @@ package com.Services;
 
 import Enitities.ArimaDiscoveryEntity;
 import IRepository.IArimaDiscoveryRepository;
-import IServices.core.ISampleServices;
+import IServices.ISampleServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
